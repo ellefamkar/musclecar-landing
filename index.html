@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Landing page for NextMedia Group" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bathurst magazine | Australian MUSCLE CAR Magazine</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="navbar container">
+        <div class="navbar__logo">
+          <a href="#">
+            <img
+              src="/assets/images/australian-muscle-car-logo.svg"
+              alt="Australian Muscle Car"
+              class="navbar__logo-image"
+            />
+          </a>
+        </div>
+        <div class="navbar__toggler">
+          <div class="bar bar-one"></div>
+          <div class="bar bar-two"></div>
+          <div class="bar bar-three"></div>
+        </div>
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="#offer">Offer</a></li>
+          <li class="navbar__item"><a href="#free-gifts">Free Gifts</a></li>
+          <li class="navbar__item"><a href="#">Products</a></li>
+          <li class="navbar__item cta">
+            <a href="#" class="btn btn--primary-border btn--block">Sign in</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <picture class="hero__image">
+          <source
+            srcset="/assets/images/hero-image-desktop.webp"
+            media="(min-width: 1024px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/assets/images/hero-image-desktop.webp"
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/assets/images/hero-image-mobile.webp"
+            media="(max-width: 767px)"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/hero-image-mobile.webp"
+            alt="Australian Muscle Car"
+            class="hero__img"
+          />
+        </picture>
+        <div class="hero__overlay">
+          <div class="hero__content">
+            <h1 class="hero__title">BATHRUST MAGAZINE on sale now!</h1>
+            <p class="hero__subtitle">
+              Don't miss BATHURST – The Great Race magazine, the definitive
+              pre-event guide to Australia’s greatest motor race.
+            </p>
+            <button class="btn btn--primary">Subscribe Now</button>
+            <div class="hero__scroll">
+              <span class="hero__arrow">&#8595;</span>
+            </div>
+          </div>
+          <!-- <div class="hero__scroll">
+          <span class="hero__arrow">&#8595;</span>
+        </div> -->
+        </div>
+      </section>
+      <div class="section--fixed">
+        <section class="offer container" id="offer">
+          <h2 class="offer__title">
+            AUSTRALIAN MUSCLE CAR
+            <span class="text-highlight">‘BATHURST’</span> SPECIAL OFFER
+          </h2>
+          <div class="container offer__main">
+            <div class="offer__image-wrapper">
+              <img
+                src="/assets/images/bathrust-1.png"
+                alt="Bathrust magazine"
+                class="offer__image"
+              />
+              <div class="offer__badge">SAVE OVER 15%</div>
+            </div>
+            <div class="offer__details">
+              <p class="offer__price">
+                <span>
+                  ONLY <br />
+                  $59<br />12 MONTHS<br />
+                </span>
+                + <span class="text-highlight">FREE GIFT</span> !
+              </p>
+              <button class="btn btn--primary">SUBSCRIBE NOW</button>
+            </div>
+          </div>
+        </section>
+  
+        <section class="gift container" id="free-gifts">
+          <div class="gift__content">
+            <div class="gift__description">
+              <h3 class="gift__title">Free Gift</h3>
+              <p class="gift__subtitle">Bathurst</p>
+              <p class="gift__details">
+                50 years of The Great Race<br />
+                Special Pictorial Edition<br />
+                210 pages covering Brock, Moffat, Lowndes, Johnson, Skaife,
+                Perkins, Greg Whincup, Murphy – all the Bathurst stars and cars...
+              </p>
+            </div>
+            <div class="gift__image">
+              <img
+                src="/assets/images/bathrust-1.png"
+                alt="Cover of the Free Bathurst Gift Edition"
+              />
+            </div>
+          </div>
+        </section>
+  
+      </div>
+
+      <!-- Gift Section -->
+      <!-- <div class="section gift">
+    <div class="gift-images">
+      <img src="https://via.placeholder.com/200x250?text=Free+Gift+Cover" alt="Gift Cover" />
+    </div>
+    <div class="gift-text">
+      <h3>FREE GIFT</h3>
+      <div class="gift-details">
+        <strong>BATHURST</strong><br />
+        50 years of The Great Race<br />
+        SPECIAL PICTORIAL EDITION<br />
+        210 pages covering Brock, Moffat,<br />
+        Lowndes, Johnson, Skaife, Perkins,<br />
+        Greg Winchup, Murphy - all the<br />
+        Bathurst stars and cars...
+      </div>
+    </div>
+    <div class="gift-images">
+      <img src="https://via.placeholder.com/200x250?text=Cover+Image+2" alt="Cover Image 2" />
+    </div>
+  </div> -->
+
+      <!-- <section class="products">
+          <h2 class="products__heading">Other Products Also</h2>
+          <div class="products__list">
+           
+            <div class="product">
+              <img
+                src="assets/images/cover5.jpg"
+                alt="Cover Image 5"
+                class="product__image"
+              />
+              <p class="product__price">$39.95</p>
+              <button class="button button--secondary">Subscribe Now</button>
+            </div>
+          </div>
+        </section> -->
+
+      <section class="products">
+        <div class="container">
+          <h2 class="products__heading">OTHER PRODUCTS</h2>
+          <div class="carousel">
+            <button class="carousel__button carousel__button--prev">
+              &#8592;
+            </button>
+            <div class="products__list" id="productsList"></div>
+            <div class="carousel__dots" id="carouselDots"></div>
+            <button class="carousel__button carousel__button--next">
+              &#8594;
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <h3 class="footer__title">Terms and Conditions</h3>
+      <p class="footer__text">
+        Copyright © 1996-2015 National Geographic SocietyCopyright. All rights
+        reserved
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
