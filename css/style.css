@@ -98,6 +98,15 @@ section:not(:first-child){
   
 }
 
+.section--fixed {
+  /* background-image: url('/assets/images/hq720.jpg'); */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: #000000; */
+}
+
 /* .section--fixed {
   position: fixed;
   bottom: 0;
@@ -512,6 +521,62 @@ section:not(:first-child){
   border-radius: 8px;
   object-fit: cover;
 }
+
+/* footer  */
+
+.footer {
+  background-color: var(--color-secondary-900);
+  color: var(--color-secondary-400);
+  min-height: 250px;
+  padding: 40px 20px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer__logo-img{
+  width: auto;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer__description {
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+.footer__social {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: #f71717;
+}
+
+.footer__social-icon svg{
+  color: var(--color-white);
+  margin: 0 8px;
+  width: 24px;
+
+}
+
+.footer__divider {
+  border: none;
+  border-top: 1px solid #414141;
+  margin: 3rem auto;
+  width: 100%;
+}
+.footer__copyright {
+  font-size: 12px;
+  color: #666;
+}
+
+
+
 
 
 @media screen and (min-width: 768px) {
