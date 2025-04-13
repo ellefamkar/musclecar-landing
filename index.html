@@ -70,15 +70,15 @@
             sizes="100vw"
           />
           <source
-            srcset="/assets/images/assets_task_01jrp9n5jmegrvegqnn1tbz64b_img_0.webp"
+            srcset="
+              /assets/images/assets_task_01jrp9n5jmegrvegqnn1tbz64b_img_0.webp
+            "
             media="(min-width: 768px)"
             type="image/webp"
             sizes="100vw"
           />
           <source
-            srcset="
-              /assets/images/mobile-version-2.png
-            "
+            srcset="/assets/images/mobile-version-2.png"
             media="(max-width: 767px)"
             type="image/webp"
             sizes="100vw"
@@ -114,7 +114,7 @@
       </section>
 
       <section class="offer container" id="offer">
-        <h2 class="offer__title" style="position: relative;">
+        <h2 class="offer__title" style="position: relative">
           AUSTRALIAN MUSCLE CAR
           <span class="text-highlight">‘BATHURST’</span> SPECIAL OFFER
         </h2>
@@ -147,11 +147,19 @@
               />
             </picture>
             <div class="offer__badge">SAVE OVER 15%</div>
-            <a href="#" class="btn--primary offer__details-button" aria-label="Offer Details">DETAILS</a> 
+            <a
+              href="#"
+              class="btn--primary offer__details-button"
+              aria-label="Offer Details"
+              >DETAILS</a
+            >
           </div>
           <div class="offer__details">
             <div>
-              <p>DO NOT PAY <span style="text-decoration: line-through;">4300$</span></p>
+              <p>
+                DO NOT PAY
+                <span style="text-decoration: line-through">4300$</span>
+              </p>
               <p class="offer__price">
                 ONLY
                 <span class="price-amount"> <strong>$59 </strong></span>
@@ -171,47 +179,28 @@
         </div>
       </section>
 
-      <section class="gift container" id="free-gifts">
-        <div class="gift__content">
-          <div class="gift__description">
-            <h3 class="gift__title">Free Gift</h3>
-            <p class="gift__subtitle">Bathurst</p>
-            <p class="gift__details">
-              50 years of The Great Race Special Pictorial Edition 210 pages
-              covering Brock, Moffat, Lowndes, Johnson, Skaife, Perkins, Greg
-              Whincup, Murphy – all the Bathurst stars and cars...
-            </p>
-          </div>
-          <div class="gift__image">
-            <img
-              src="/assets/images/bathrust-1.png"
-              alt="Cover of the Free Bathurst Gift Edition"
-              loading="lazy"
-            />
+      <section class="gift section--fixed" id="free-gifts">
+        <div class="container">
+          <div class="gift__content">
+            <div class="gift__description">
+              <h2 class="gift__title">FREE GIFT</h2>
+              <h3 class="gift__subtitle">BATHRUST</h3>
+              <p class="gift__details">
+                50 years of The Great Race Special Pictorial Edition 210 pages
+                covering Brock, Moffat, Lowndes, Johnson, Skaife, Perkins, Greg
+                Whincup, Murphy – all the Bathurst stars and cars...
+              </p>
+            </div>
+            <div class="gift__image">
+              <img
+                src="/assets/images/image-2.jpg"
+                alt="Bathurst Special Free Gift"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
-      <!-- Gift Section -->
-      <!-- <div class="section gift">
-    <div class="gift-images">
-      <img src="https://via.placeholder.com/200x250?text=Free+Gift+Cover" alt="Gift Cover" />
-    </div>
-    <div class="gift-text">
-      <h3>FREE GIFT</h3>
-      <div class="gift-details">
-        <strong>BATHURST</strong><br />
-        50 years of The Great Race<br />
-        SPECIAL PICTORIAL EDITION<br />
-        210 pages covering Brock, Moffat,<br />
-        Lowndes, Johnson, Skaife, Perkins,<br />
-        Greg Winchup, Murphy - all the<br />
-        Bathurst stars and cars...
-      </div>
-    </div>
-    <div class="gift-images">
-      <img src="https://via.placeholder.com/200x250?text=Cover+Image+2" alt="Cover Image 2" />
-    </div>
-  </div> -->
 
       <!-- <section class="products">
           <h2 class="products__heading">Other Products Also</h2>
@@ -229,25 +218,11 @@
           </div>
         </section> -->
 
-      <section class="products">
-        <div class="container">
-          <h2 class="products__heading">OTHER PRODUCTS</h2>
-          <div class="carousel">
-            <button
-              class="carousel__button carousel__button--prev"
-              aria-label="Previous products"
-            >
-              &#8592;
-            </button>
-            <div class="products__list" id="productsList"></div>
-            <div class="carousel__dots" id="carouselDots"></div>
-            <button
-              class="carousel__button carousel__button--next"
-              aria-label="Next products"
-            >
-              &#8594;
-            </button>
-          </div>
+      <section class="products container">
+        <h2 class="products__heading">OTHER PRODUCTS</h2>
+        <div class="carousel">
+          <div class="products__list" id="productsList"></div>
+          <div class="carousel__dots" id="carouselDots"></div>
         </div>
       </section>
     </main>

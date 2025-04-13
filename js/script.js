@@ -27,14 +27,12 @@ window.addEventListener('scroll', () => {
 let autoplayInterval;
 
 const products = [
-  { image: '/assets/images/bathrust-1.png', price: '$39.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/bathrust-1.png', price: '$39.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/bathrust-1.png', price: '$39.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/bathrust-1.png', price: '$29.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/bathrust-1.png', price: '$49.95', alt: 'Bathrust Magazine' },
-];
-
-// Create product items
+  { image: '/assets/images/product-1.webp', price: '$39.95', alt: 'Bathrust Magazine' },
+  { image: '/assets/images/product-2.webp', price: '$39.95', alt: 'Bathrust Magazine' },
+  { image: '/assets/images/product-3.webp', price: '$39.95', alt: 'Bathrust Magazine' },
+  { image: '/assets/images/product-4.webp', price: '$29.95', alt: 'Bathrust Magazine' },
+  { image: '/assets/images/product-5.webp', price: '$49.95', alt: 'Bathrust Magazine' },
+]
 products.forEach(product => {
   const productItem = document.createElement('div');
   productItem.className = 'product';
