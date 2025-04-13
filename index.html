@@ -3,59 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Landing page for NextMedia Group" />
+    <meta
+      name="description"
+      content="Subscribe to Bathurst Magazine - Australia's premier muscle car publication. Get exclusive offers, free gifts, and in-depth coverage of The Great Race."
+    />
+    <meta
+      name="keywords"
+      content="Bathurst Magazine, Australian Muscle Car, motorsport, car magazine, Bathurst 1000"
+    />
+    <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Bathurst magazine | Australian MUSCLE CAR Magazine</title>
+    <link
+      rel="preload"
+      href="/assets/images/hero-image-desktop.webp"
+      as="image"
+      media="(min-width: 1024px)"
+    />
+    <title>
+      Bathurst magazine | Australian MUSCLE CAR Magazine & Motorsport News
+    </title>
   </head>
   <body>
     <header class="main-header">
-      <nav class="navbar container">
-        <div class="navbar__logo">
-          <a href="#">
+      <nav class="navbar container" aria-label="Main navbar">
+        <div class="navbar__logo" aria-label="Logo">
+          <a href="#" aria-label="Logo">
             <img
               src="/assets/images/australian-muscle-car-logo.svg"
-              alt="Australian Muscle Car"
+              alt="Australian Muscle Car Magazine Logo"
               class="navbar__logo-image"
+              loading="lazy"
             />
           </a>
         </div>
-        <div class="navbar__toggler">
+        <button class="navbar__toggler" aria-label="Toggle navigation menu">
           <div class="bar bar-one"></div>
           <div class="bar bar-two"></div>
           <div class="bar bar-three"></div>
-        </div>
+        </button>
         <ul class="navbar__list">
-          <li class="navbar__item"><a href="#offer">Offer</a></li>
-          <li class="navbar__item"><a href="#free-gifts">Free Gifts</a></li>
-          <li class="navbar__item"><a href="#">Products</a></li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#offer">Offer</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#free-gifts">Free Gifts</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#products">Products</a>
+          </li>
           <li class="navbar__item cta">
-            <a href="#" class="btn btn--primary-border btn--block">Sign in</a>
+            <a class="navbar__link" href="#" class="btn btn--block">Sign in</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="hero">
         <picture class="hero__image">
           <source
-            srcset="/assets/images/hero-image-desktop.webp"
+            srcset="
+              /assets/images/assets_task_01jrp9n5jmegrvegqnn1tbz64b_img_0.webp
+            "
             media="(min-width: 1024px)"
             type="image/webp"
+            sizes="100vw"
           />
           <source
-            srcset="/assets/images/hero-image-desktop.webp"
+            srcset="/assets/images/assets_task_01jrp9n5jmegrvegqnn1tbz64b_img_0.webp"
             media="(min-width: 768px)"
             type="image/webp"
+            sizes="100vw"
           />
           <source
-            srcset="/assets/images/hero-image-mobile.webp"
+            srcset="
+              /assets/images/mobile-version-2.png
+            "
             media="(max-width: 767px)"
             type="image/webp"
+            sizes="100vw"
           />
           <img
-            src="/assets/images/hero-image-mobile.webp"
-            alt="Australian Muscle Car"
+            src="/assets/images/mobile-version-2.png"
+            alt="Australian Muscle Car at Bathurst race"
             class="hero__img"
+            loading="eager"
           />
         </picture>
         <div class="hero__overlay">
@@ -65,66 +97,96 @@
               Don't miss BATHURST – The Great Race magazine, the definitive
               pre-event guide to Australia’s greatest motor race.
             </p>
-            <button class="btn btn--primary">SUBSCRIBE NOW</button>
-            <div class="hero__scroll">
+            <button
+              class="btn btn--primary"
+              aria-label="Subscribe to Bathurst Magazine"
+            >
+              SUBSCRIBE NOW
+            </button>
+            <!-- <div class="hero__scroll">
               <span class="hero__arrow">&#8595;</span>
-            </div>
+            </div> -->
           </div>
-          <!-- <div class="hero__scroll">
-          <span class="hero__arrow">&#8595;</span>
-        </div> -->
+          <div class="hero__scroll">
+            <span class="hero__arrow">&#8595;</span>
+          </div>
         </div>
       </section>
-      <div class="section--fixed">
-        <div class="container">
-          <section class="offer" id="offer">
-            <h2 class="offer__title">
-              AUSTRALIAN MUSCLE CAR
-              <span class="text-highlight">‘BATHURST’</span> SPECIAL OFFER
-            </h2>
-            <div class="container offer__main">
-              <div class="offer__image-wrapper">
-                <img
-                  src="/assets/images/bathrust-1.png"
-                  alt="Bathrust magazine"
-                  class="offer__image"
-                />
-                <div class="offer__badge">SAVE OVER 15%</div>
-              </div>
-              <div class="offer__details">
-                <p class="offer__price">
-                  <!-- <span>Full subscription for 1050$</span> -->
-                  <!-- <br /> -->
-                  <!-- <span style="color: brown">But</span> -->
-                  <!-- <br /> -->
-                  <span>
-                    ONLY <br />
-                    $59<br />12 MONTHS<br />
-                  </span>
-                  + <span class="text-highlight">FREE GIFT</span> !
-                </p>
-                <button class="btn btn--primary">SUBSCRIBE NOW</button>
-              </div>
+
+      <section class="offer container" id="offer">
+        <h2 class="offer__title" style="position: relative;">
+          AUSTRALIAN MUSCLE CAR
+          <span class="text-highlight">‘BATHURST’</span> SPECIAL OFFER
+        </h2>
+        <div class="offer__main">
+          <div class="offer__image-wrapper">
+            <picture>
+              <source
+                srcset="/assets/images/offer-desktop.png"
+                media="(min-width: 1024px)"
+                type="image/webp"
+                sizes="100vw"
+              />
+              <source
+                srcset="/assets/images/offer-desktop.png"
+                media="(min-width: 768px)"
+                type="image/webp"
+                sizes="100vw"
+              />
+              <source
+                srcset="/assets/images/offer-mobile.png"
+                media="(max-width: 767px)"
+                type="image/webp"
+                sizes="100vw"
+              />
+              <img
+                src="/assets/images/offer-mobile.png"
+                alt="Bathurst Special Edition Magazine offer"
+                class="offer__image"
+                loading="eager"
+              />
+            </picture>
+            <div class="offer__badge">SAVE OVER 15%</div>
+            <a href="#" class="btn--primary offer__details-button" aria-label="Offer Details">DETAILS</a> 
+          </div>
+          <div class="offer__details">
+            <div>
+              <p>DO NOT PAY <span style="text-decoration: line-through;">4300$</span></p>
+              <p class="offer__price">
+                ONLY
+                <span class="price-amount"> <strong>$59 </strong></span>
+                <span class="price-duration"> 12 MONTHS </span>
+              </p>
+              <p class="offer__gift">
+                <span class="text-highlight">+ FREE GIFT !</span>
+              </p>
             </div>
-          </section>
+            <button
+              class="btn btn--primary"
+              aria-label="Subscribe to 12-month offer"
+            >
+              SUBSCRIBE NOW
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
+
       <section class="gift container" id="free-gifts">
         <div class="gift__content">
           <div class="gift__description">
             <h3 class="gift__title">Free Gift</h3>
             <p class="gift__subtitle">Bathurst</p>
             <p class="gift__details">
-              50 years of The Great Race<br />
-              Special Pictorial Edition<br />
-              210 pages covering Brock, Moffat, Lowndes, Johnson, Skaife,
-              Perkins, Greg Whincup, Murphy – all the Bathurst stars and cars...
+              50 years of The Great Race Special Pictorial Edition 210 pages
+              covering Brock, Moffat, Lowndes, Johnson, Skaife, Perkins, Greg
+              Whincup, Murphy – all the Bathurst stars and cars...
             </p>
           </div>
           <div class="gift__image">
             <img
               src="/assets/images/bathrust-1.png"
               alt="Cover of the Free Bathurst Gift Edition"
+              loading="lazy"
             />
           </div>
         </div>
@@ -171,12 +233,18 @@
         <div class="container">
           <h2 class="products__heading">OTHER PRODUCTS</h2>
           <div class="carousel">
-            <button class="carousel__button carousel__button--prev">
+            <button
+              class="carousel__button carousel__button--prev"
+              aria-label="Previous products"
+            >
               &#8592;
             </button>
             <div class="products__list" id="productsList"></div>
             <div class="carousel__dots" id="carouselDots"></div>
-            <button class="carousel__button carousel__button--next">
+            <button
+              class="carousel__button carousel__button--next"
+              aria-label="Next products"
+            >
               &#8594;
             </button>
           </div>
@@ -187,11 +255,14 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__logo">
-          <img
-            class="footer__logo-img"
-            src="/assets/images/australian-muscle-car-logo.svg"
-            alt="Australian Muscle Car"
-          />
+          <a href="/">
+            <img
+              class="footer__logo-img"
+              src="/assets/images/australian-muscle-car-logo.svg"
+              alt="Australian Muscle Car"
+              loading="lazy"
+            />
+          </a>
         </div>
         <div class="footer__description">
           <p>
@@ -200,7 +271,13 @@
           </p>
         </div>
         <div class="footer__social">
-          <a href="#" class="footer__social-icon" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="footer__social-icon"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               class="icon icon-twitter"
               focusable="false"
@@ -208,14 +285,22 @@
               height="32"
               viewBox="0 0 32 32"
               fill="none"
-              xmlns=""> <title>X</title>
+              xmlns=""
+            >
+              <title>X</title>
               <path
                 d="M18.3055 13.8561L28.505 2H26.088L17.2318 12.2945L10.1584 2H2L12.6964 17.5671L2 30H4.41709L13.7695 19.1287L21.2396 30H29.3979L18.3049 13.8561H18.3055ZM14.995 17.7042L13.9112 16.1541L5.288 3.81955H9.00051L15.9595 13.7739L17.0433 15.324L26.0892 28.2632H22.3767L14.995 17.7048V17.7042Z"
                 fill="#ffffff"
               ></path>
             </svg>
           </a>
-          <a href="#" class="footer__social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="footer__social-icon"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               class="icon icon-facebook"
               focusable="false"
@@ -232,7 +317,13 @@
               ></path>
             </svg>
           </a>
-          <a href="#" class="footer__social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="footer__social-icon"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               class="icon icon-instagram"
               focusable="false"
@@ -251,7 +342,13 @@
               ></path>
             </svg>
           </a>
-          <a href="#" class="footer__social-icon" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="footer__social-icon"
+            aria-label="Pinterest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               class="icon icon-pinterest"
               focusable="false"
@@ -259,7 +356,8 @@
               width="32"
               height="32"
               fill="none"
-              xmlns="" >
+              xmlns=""
+            >
               <title>Pinterest</title>
               <path
                 d="M14.045 20.284c-.658 2.879-1.302 5.652-2.706 7.84-.43.67-.862 1.514-1.597 1.876-1.085-5.588 1.184-10.29 2.08-14.987-1.142-2.333-.432-6.283 2.017-6.73 3.545-.648 2.61 3.629 2.01 5.617-.332 1.092-.925 2.137-.836 3.334.198 2.521 3.37 2.686 4.996 1.386 2.331-1.857 3.007-5.446 2.777-8.395-.344-4.489-5.428-6.72-9.919-4.926-2.315.924-4.415 3.05-4.72 6.174-.157 1.645.188 2.959.835 3.886.097.142.433.39.483.767.102.76-.35 1.578-.763 2.145-2.3-.661-3.486-2.724-3.675-5.337C4.59 6.984 9.476 2.462 15.221 2.038c6.137-.45 10.999 3.093 11.45 8.257.336 3.838-1.027 7.7-3.19 9.78-1.627 1.562-5.084 3.093-7.91 1.599-.625-.333-.905-.739-1.526-1.39Z"
@@ -287,14 +385,9 @@
               <a href="#">Membership Terms</a>
             </li>
           </ul>
-          
-          
-          
-          
-          
         </nav>
         <div class="footer__copyright">
-          Copyright &copy; 2025 Australian Muscle Car. All rights reserved.
+          &copy; 2025 Australian Muscle Car. All rights reserved.
         </div>
       </div>
     </footer>
