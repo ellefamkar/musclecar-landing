@@ -1,14 +1,6 @@
 const toggler = document.querySelector(".navbar__toggler");
-const navbar = document.querySelector(".navbar");
 const productsList = document.getElementById('productsList');
-
-const prevButton = document.querySelector('.carousel__button--prev');
-const nextButton = document.querySelector('.carousel__button--next');
-const productList = document.querySelector('.products__list');
-const dotsContainer = document.getElementById('carouselDots');
-
-
-let currentIndex = 0;
+const navbar = document.querySelector(".navbar");
 
 toggler.addEventListener("click", () => {
   navbar.classList.toggle("navbar--expanded");
@@ -23,86 +15,32 @@ window.addEventListener('scroll', () => {
     }
 });
   
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const products = [
+    { id:1, image: '/assets/images/product-1.png', price: '$39.95', alt: 'Product 1' },
+    { id:2, image: '/assets/images/product-2.webp', price: '$39.95', alt: 'Product 2' },
+    { id:3, image: '/assets/images/product-3.png', price: '$39.95', alt: 'Product 3' },
+  ]
 
-let autoplayInterval;
-
-const products = [
-  { image: '/assets/images/product-1.webp', price: '$39.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/product-2.webp', price: '$39.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/product-3.webp', price: '$39.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/product-4.webp', price: '$29.95', alt: 'Bathrust Magazine' },
-  { image: '/assets/images/product-5.webp', price: '$49.95', alt: 'Bathrust Magazine' },
-]
-products.forEach(product => {
-  const productItem = document.createElement('div');
-  productItem.className = 'product';
-  productItem.innerHTML = `
-    <img src="${product.image}" alt="${product.alt}" class="product__image"/>
-    <p class="product__price">${product.price}</p>
-    <button class="btn btn--primary">Subscribe Now</button>
-  `;
-  productsList.appendChild(productItem);
-});
-
-// Dots
-function createDots() {
-  for (let i = 0; i < products.length; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('carousel__dot');
-    if (i === 0) dot.classList.add('carousel__dot--active');
-    dot.addEventListener('click', () => {
-      currentIndex = i;
-      updateSlider(currentIndex);
-      resetAutoplay();
-    });
-    dotsContainer.appendChild(dot);
-  }
-}
-
-// Update active dot and slide
-function updateSlider(index) {
-  const slideWidth = document.querySelector('.product').offsetWidth + 16;
-  productsList.style.transform = `translateX(-${slideWidth * index}px)`;
-
-  document.querySelectorAll('.carousel__dot').forEach((dot, i) => {
-    dot.classList.toggle('carousel__dot--active', i === index);
+  products.forEach(product => {
+    const productItem = document.createElement('figure');
+    productItem.classList.add('product');
+    productItem.innerHTML = `
+        <div class="product__image-container">
+            <img src="${product.image}" alt="${product.alt}" class="product__image"/>
+            <div class="product__overlay">
+                <a href="/" class="btn btn--primary product__button">${product.alt} details</a>
+            </div>
+        </div>
+        <figcaption class="product__caption">
+            <p class="product__price">${product.price}</p>
+            <button class="btn btn--block btn--primary">Subscribe Now</button>
+        </figcaption>
+    `;
+    productsList.appendChild(productItem);
   });
-}
-
-// Navigation
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + products.length) % products.length;
-  updateSlider(currentIndex);
-  resetAutoplay();
+  
 });
-
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % products.length;
-  updateSlider(currentIndex);
-  resetAutoplay();
-});
-
-// Autoplay
-function startAutoplay() {
-  autoplayInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % products.length;
-    updateSlider(currentIndex);
-  }, 3000);
-}
-
-function resetAutoplay() {
-  clearInterval(autoplayInterval);
-  startAutoplay();
-}
-
-// Init
-window.addEventListener('load', () => {
-  createDots();
-  updateSlider(currentIndex);
-  startAutoplay();
-});
-
-window.addEventListener('resize', () => {
-  updateSlider(currentIndex);
-});
-
+  
+  

@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Subscribe to Bathurst Magazine - Australia's premier muscle car publication. Get exclusive offers, free gifts, and in-depth coverage of The Great Race."
-    />
-    <meta
-      name="keywords"
-      content="Bathurst Magazine, Australian Muscle Car, motorsport, car magazine, Bathurst 1000"
-    />
+    <meta name="description" content="Subscribe to Bathurst Magazine - Australia's premier muscle car publication. Get exclusive offers, free gifts, and in-depth coverage of The Great Race." />
+    <meta name="keywords" content="Bathurst Magazine, Australian Muscle Car, motorsport, car magazine, Bathurst 1000" />
+    <meta name="robots" content="index, follow" />
+
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
+    
     <link
       rel="preload"
-      href="/assets/images/hero-image-desktop.webp"
+      href="/assets/images/hero.webp"
       as="image"
-      media="(min-width: 1024px)"
-    />
+      media="(min-width: 1024px)"/>
+
     <title>
       Bathurst magazine | Australian MUSCLE CAR Magazine & Motorsport News
     </title>
   </head>
+
   <body>
+
     <header class="main-header">
-      <nav class="navbar container" aria-label="Main navbar">
-        <div class="navbar__logo" aria-label="Logo">
-          <a href="#" aria-label="Logo">
+      <nav class="navbar container" aria-label="Main navigation">
+        <div class="navbar__logo" aria-label="Australian Muscle Car Logo">
+          <a href="#" aria-label="Home">
             <img
               src="/assets/images/australian-muscle-car-logo.svg"
               alt="Australian Muscle Car Magazine Logo"
@@ -51,7 +52,7 @@
           <li class="navbar__item">
             <a class="navbar__link" href="#products">Products</a>
           </li>
-          <li class="navbar__item cta">
+          <li class="navbar__item navbar__link--cta">
             <a class="navbar__link" href="#" class="btn btn--block">Sign in</a>
           </li>
         </ul>
@@ -62,29 +63,25 @@
       <section class="hero">
         <picture class="hero__image">
           <source
-            srcset="
-              /assets/images/assets_task_01jrp9n5jmegrvegqnn1tbz64b_img_0.webp
-            "
+            srcset="/assets/images/hero-banner-desktop.webp"
             media="(min-width: 1024px)"
             type="image/webp"
             sizes="100vw"
           />
           <source
-            srcset="
-              /assets/images/assets_task_01jrp9n5jmegrvegqnn1tbz64b_img_0.webp
-            "
+            srcset="/assets/images/hero-banner-desktop.webp"
             media="(min-width: 768px)"
             type="image/webp"
             sizes="100vw"
           />
           <source
-            srcset="/assets/images/mobile-version-2.png"
+            srcset="/assets/images/hero-banner-mobile.webp"
             media="(max-width: 767px)"
             type="image/webp"
             sizes="100vw"
           />
           <img
-            src="/assets/images/mobile-version-2.png"
+            src="/assets/images/hero-banner-mobile.webp"
             alt="Australian Muscle Car at Bathurst race"
             class="hero__img"
             loading="eager"
@@ -116,7 +113,7 @@
       <section class="offer container" id="offer">
         <h2 class="offer__title" style="position: relative">
           AUSTRALIAN MUSCLE CAR
-          <span class="text-highlight">‘BATHURST’</span> SPECIAL OFFER
+          <span class="text--highlight-border">‘BATHURST’</span> SPECIAL OFFER
         </h2>
         <div class="offer__main">
           <div class="offer__image-wrapper">
@@ -156,17 +153,13 @@
           </div>
           <div class="offer__details">
             <div>
-              <p>
-                DO NOT PAY
-                <span style="text-decoration: line-through">4300$</span>
-              </p>
               <p class="offer__price">
                 ONLY
                 <span class="price-amount"> <strong>$59 </strong></span>
                 <span class="price-duration"> 12 MONTHS </span>
               </p>
               <p class="offer__gift">
-                <span class="text-highlight">+ FREE GIFT !</span>
+                <span class="text--highlight-border">+ FREE GIFT !</span>
               </p>
             </div>
             <button
@@ -202,28 +195,27 @@
         </div>
       </section>
 
-      <!-- <section class="products">
-          <h2 class="products__heading">Other Products Also</h2>
-          <div class="products__list">
-           
-            <div class="product">
-              <img
-                src="assets/images/cover5.jpg"
-                alt="Cover Image 5"
-                class="product__image"
-              />
-              <p class="product__price">$39.95</p>
-              <button class="button button--secondary">Subscribe Now</button>
-            </div>
-          </div>
-        </section> -->
-
-      <section class="products container">
+      <section class="products container" id="products">
         <h2 class="products__heading">OTHER PRODUCTS</h2>
-        <div class="carousel">
-          <div class="products__list" id="productsList"></div>
-          <div class="carousel__dots" id="carouselDots"></div>
-        </div>
+        <div class="products__list" id="productsList"></div>
+      </section>
+
+      <section class="container terms">
+        <h4 class="terms__title">TERMS & CONDITIONS</h4>
+        <p class="terms__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          quibusdam quidem laborum nihil rerum dolorem qui illum. Commodi, vitae
+          eveniet optio consequuntur maiores quo qui impedit tempora atque non,
+          consequatur ea, voluptatibus magnam minus? Tempore vel nostrum labore
+          aut ipsum et voluptas deserunt, at nobis excepturi, id culpa iure quis
+          tempora corrupti explicabo dolore mollitia ex laudantium eum? Nulla
+          veritatis cumque enim maiores laudantium exercitationem soluta
+          officiis eveniet, molestias quaerat temporibus sapiente eos sed cum,
+          odio possimus! Voluptates laborum alias error esse minus quas odit
+          neque harum cupiditate accusamus,
+          <strong><a href="#" class="text--highlight" target="_blank">"Terms"</a> </strong>vitae
+          adipisci omnis expedita officia natus suscipit magni fugit commodi?
+        </p>
       </section>
     </main>
 
