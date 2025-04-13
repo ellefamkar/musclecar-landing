@@ -657,7 +657,7 @@ section:not(:first-child){
 }
 
 .terms__description {
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: justify;
   margin-top: 1rem;
 }
