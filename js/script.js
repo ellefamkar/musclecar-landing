@@ -1,5 +1,5 @@
 const toggler = document.querySelector(".navbar__toggler");
-const productsList = document.getElementById('productsList');
+const productsList = document.getElementById('products-list');
 const navbar = document.querySelector(".navbar");
 
 toggler.addEventListener("click", () => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     productItem.classList.add('product');
     productItem.innerHTML = `
         <div class="product__image-container">
-            <img src="${product.image}" alt="${product.alt}" class="product__image"/>
+            <img src="${product.image}" alt="${product.alt}" class="product__image" loading="lazy"/>
             <div class="product__overlay">
                 <a href="/" class="btn btn--primary product__button">${product.alt} details</a>
             </div>

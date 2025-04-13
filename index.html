@@ -53,13 +53,15 @@
             <a class="navbar__link" href="#products">Products</a>
           </li>
           <li class="navbar__item navbar__link--cta">
-            <a class="navbar__link" href="#" class="btn btn--block">Sign in</a>
+            <a class="navbar__link" href="#" class="btn btn--block" aria-label="Sign in to your account.">Sign in</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
+      
+      <!-- hero section  -->
       <section class="hero">
         <picture class="hero__image">
           <source
@@ -82,27 +84,23 @@
           />
           <img
             src="/assets/images/hero-banner-mobile.webp"
-            alt="Australian Muscle Car at Bathurst race"
+            alt="Australian Muscle Car on Bathurst Magazine"
             class="hero__img"
             loading="eager"
           />
         </picture>
         <div class="hero__overlay">
           <div class="hero__content">
-            <h1 class="hero__title">BATHRUST MAGAZINE on sale now!</h1>
+            <h1 class="hero__title">BATHRUST MAGAZINE ON SALE NOW!</h1>
             <p class="hero__subtitle">
               Don't miss BATHURST – The Great Race magazine, the definitive
               pre-event guide to Australia’s greatest motor race.
             </p>
             <button
               class="btn btn--primary"
-              aria-label="Subscribe to Bathurst Magazine"
-            >
+              aria-label="Subscribe to Bathurst Magazine" >
               SUBSCRIBE NOW
             </button>
-            <!-- <div class="hero__scroll">
-              <span class="hero__arrow">&#8595;</span>
-            </div> -->
           </div>
           <div class="hero__scroll">
             <span class="hero__arrow">&#8595;</span>
@@ -110,53 +108,51 @@
         </div>
       </section>
 
+      <!-- offer section  -->
       <section class="offer container" id="offer">
         <h2 class="offer__title" style="position: relative">
-          AUSTRALIAN MUSCLE CAR
-          <span class="text--highlight-border">‘BATHURST’</span> SPECIAL OFFER
+          AUSTRALIAN MUSCLE CAR <span class="text--highlight-border">‘BATHURST’</span> SPECIAL OFFER
         </h2>
         <div class="offer__main">
-          <div class="offer__image-wrapper">
+          <div class="offer__image-container">
             <picture>
               <source
-                srcset="/assets/images/offer-desktop.png"
+                srcset="/assets/images/offer-desktop.webp"
                 media="(min-width: 1024px)"
                 type="image/webp"
                 sizes="100vw"
               />
               <source
-                srcset="/assets/images/offer-desktop.png"
+                srcset="/assets/images/offer-desktop.webp"
                 media="(min-width: 768px)"
                 type="image/webp"
                 sizes="100vw"
               />
               <source
-                srcset="/assets/images/offer-mobile.png"
+                srcset="/assets/images/offer-mobile.webp"
                 media="(max-width: 767px)"
                 type="image/webp"
                 sizes="100vw"
               />
               <img
-                src="/assets/images/offer-mobile.png"
-                alt="Bathurst Special Edition Magazine offer"
+                src="/assets/images/offer-mobile.webp"
+                alt="Bathurst Magazine Special offer"
                 class="offer__image"
                 loading="eager"
               />
             </picture>
             <div class="offer__badge">SAVE OVER 15%</div>
-            <a
-              href="#"
+            <a href="#"
               class="btn--primary offer__details-button"
-              aria-label="Offer Details"
-              >DETAILS</a
-            >
+              aria-label="Offer Details"> 
+            DETAILS </a>
           </div>
           <div class="offer__details">
             <div>
               <p class="offer__price">
                 ONLY
-                <span class="price-amount"> <strong>$59 </strong></span>
-                <span class="price-duration"> 12 MONTHS </span>
+                <span> <strong>$59 </strong></span>
+                <span> 12 MONTHS </span>
               </p>
               <p class="offer__gift">
                 <span class="text--highlight-border">+ FREE GIFT !</span>
@@ -164,14 +160,14 @@
             </div>
             <button
               class="btn btn--primary"
-              aria-label="Subscribe to 12-month offer"
-            >
+              aria-label="Subscribe to the 12-month offer" >
               SUBSCRIBE NOW
             </button>
           </div>
         </div>
       </section>
 
+      <!-- gift section  -->
       <section class="gift section--fixed" id="free-gifts">
         <div class="container">
           <div class="gift__content">
@@ -186,7 +182,7 @@
             </div>
             <div class="gift__image">
               <img
-                src="/assets/images/image-2.jpg"
+                src="/assets/images/free-gift.webp"
                 alt="Bathurst Special Free Gift"
                 loading="lazy"
               />
@@ -195,34 +191,26 @@
         </div>
       </section>
 
+      <!-- products section -->
       <section class="products container" id="products">
         <h2 class="products__heading">OTHER PRODUCTS</h2>
-        <div class="products__list" id="productsList"></div>
+        <div class="products__list" id="products-list"></div>
       </section>
 
+      <!-- terms section  -->
       <section class="container terms">
         <h4 class="terms__title">TERMS & CONDITIONS</h4>
         <p class="terms__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-          quibusdam quidem laborum nihil rerum dolorem qui illum. Commodi, vitae
-          eveniet optio consequuntur maiores quo qui impedit tempora atque non,
-          consequatur ea, voluptatibus magnam minus? Tempore vel nostrum labore
-          aut ipsum et voluptas deserunt, at nobis excepturi, id culpa iure quis
-          tempora corrupti explicabo dolore mollitia ex laudantium eum? Nulla
-          veritatis cumque enim maiores laudantium exercitationem soluta
-          officiis eveniet, molestias quaerat temporibus sapiente eos sed cum,
-          odio possimus! Voluptates laborum alias error esse minus quas odit
-          neque harum cupiditate accusamus,
-          <strong><a href="#" class="text--highlight" target="_blank">"Terms"</a> </strong>vitae
-          adipisci omnis expedita officia natus suscipit magni fugit commodi?
+          By accessing and using the Bathurst Magazine website, you agree to comply with the following terms. All content, including articles, images, and videos, is owned by Bathurst Magazine and may not be reproduced without permission. Prices for subscriptions and products are subject to change without notice. We are not responsible for any inaccuracies or errors in the content. By subscribing, you agree to receive <strong><a href="#" class="text--highlight" target="_blank" aria-label="Promotional Emails">"Promotional Emails"</a> </strong>, which you can opt out of at any time. All transactions are processed securely, and your personal information will be protected in accordance with our privacy policy.
         </p>
       </section>
+
     </main>
 
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__logo">
-          <a href="/">
+          <a href="#" aria-label="Home">
             <img
               class="footer__logo-img"
               src="/assets/images/australian-muscle-car-logo.svg"
@@ -243,8 +231,7 @@
             class="footer__social-icon"
             aria-label="Twitter"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <svg
               class="icon icon-twitter"
               focusable="false"
@@ -252,8 +239,7 @@
               height="32"
               viewBox="0 0 32 32"
               fill="none"
-              xmlns=""
-            >
+              xmlns="" >
               <title>X</title>
               <path
                 d="M18.3055 13.8561L28.505 2H26.088L17.2318 12.2945L10.1584 2H2L12.6964 17.5671L2 30H4.41709L13.7695 19.1287L21.2396 30H29.3979L18.3049 13.8561H18.3055ZM14.995 17.7042L13.9112 16.1541L5.288 3.81955H9.00051L15.9595 13.7739L17.0433 15.324L26.0892 28.2632H22.3767L14.995 17.7048V17.7042Z"
@@ -266,8 +252,7 @@
             class="footer__social-icon"
             aria-label="Facebook"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <svg
               class="icon icon-facebook"
               focusable="false"
@@ -337,19 +322,19 @@
         <nav class="footer__nav">
           <ul class="footer__nav-links">
             <li class="footer__nav-link">
-              <a href="#">FAQs</a>
+              <a href="#" aria-label="Frequently Asked Questions">FAQs</a>
             </li>
             <li class="footer__nav-link">
-              <a href="#">User Agreement</a>
+              <a href="#" aria-label="User Agreement And Contensement">User Agreement</a>
             </li>
             <li class="footer__nav-link">
-              <a href="#">Privacy Policy</a>
+              <a href="#" aria-label="Bathurst Privacy Policy">Privacy Policy</a>
             </li>
             <li class="footer__nav-link">
-              <a href="#">Your Privacy Rights</a>
+              <a href="#" aria-label="Your Privay Rights in Bathurst website">Your Privacy Rights</a>
             </li>
             <li class="footer__nav-link">
-              <a href="#">Membership Terms</a>
+              <a href="#" aria-label="Membership terms and details">Membership Terms</a>
             </li>
           </ul>
         </nav>
